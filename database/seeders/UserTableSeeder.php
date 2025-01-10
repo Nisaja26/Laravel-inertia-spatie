@@ -15,9 +15,6 @@ class UserTableSeeder extends Seeder
      */
     public function run(): void
     {
-        // 1 insert data user baru ke database dengan Eloquent
-
-    
         //create user
         $user = User::create([
             'name'      => 'Syahrizaldev',
@@ -25,21 +22,16 @@ class UserTableSeeder extends Seeder
             'password'  => bcrypt('password'),
         ]);
 
-        // Mengambil semua data user yang ada
         //get all permissions
         $permissions = Permission::all();
 
-        // mencari role dengan ID 1
         //get role admin
         $role = Role::find(1);
 
-        // assigent semua permissions yang ada dengan method syncPermissions
         //assign permission to role
         $role->syncPermissions($permissions);
 
-        // setelah role tersebut sudah memiliki semua hak akses
-
-        //assign role to user yang sudah dibuat
+        //assign role to user
         $user->assignRole($role);
     }
 }
