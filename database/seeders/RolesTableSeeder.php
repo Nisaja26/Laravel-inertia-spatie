@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class RolesTableSeeder extends Seeder
 {
@@ -12,6 +13,8 @@ class RolesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        // create data
+        Role::create(['name' => 'admin']); 
+        Role::create(['name' => 'user']);
     }
 }
