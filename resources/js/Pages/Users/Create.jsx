@@ -82,7 +82,7 @@ export default function Create({auth}) {
                                 </div>
                             )} */}
                         </div>
-                        {/* <div className='mb-4'>
+                          <div className='mb-4'>
                             <div className={`p-4 rounded-t-lg border bg-white`}>
                                 <div className='flex items-center gap-2 text-sm text-gray-700'>
                                     Roles
@@ -96,7 +96,7 @@ export default function Create({auth}) {
                                 </div>
                                 {errors.selectedRoles && <div className='text-xs text-red-500 mt-4'>{errors.selectedRoles}</div>}
                             </div>
-                        </div> */}
+                        </div> 
                         <div className='mb-4'>
                             <Input label={'Password'} type={'password'} value={data.password} onChange={e => setData('password', e.target.value)} errors={errors.password} placeholder="Input password user.."/>
                         </div>
